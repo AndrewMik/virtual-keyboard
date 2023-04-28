@@ -12,6 +12,7 @@ const main = createElement('main');
 const footer = createElement('footer');
 
 const title = document.createElement('h1');
+const textArea = document.createElement('textarea');
 const keyboard = document.createElement('div');
 const footerText = document.createElement('p');
 
@@ -20,9 +21,11 @@ footerText.innerHTML = `Клавиатура создана в операцио�
                         <br>Для переключения языка комбинация: левыe ctrl + alt.`;
 
 title.classList.add('title');
+textArea.classList.add('keyboard-output');
 keyboard.classList.add('keyboard');
 footerText.classList.add('footer-text');
 
 header.append(title);
+main.append(textArea);
 main.append(keyboard);
 footer.append(footerText);
