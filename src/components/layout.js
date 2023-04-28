@@ -17,7 +17,7 @@ const footerText = document.createElement('p');
 
 title.textContent = 'Virtual keyboard';
 footerText.innerHTML = `Клавиатура создана в операционной системе Windows.
-                        <br>Для переключения языка комбинация: левыe shift + alt.`;
+                        <br>Для переключения языка комбинация: левыe ctrl + alt.`;
 
 title.classList.add('title');
 keyboard.classList.add('keyboard');

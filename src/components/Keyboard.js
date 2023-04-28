@@ -1,14 +1,22 @@
+const ENGLISH = 'english';
+const RUSSIAN = 'russian';
+const UPPER_CASE = 'upperCase';
+const LOWER_CASE = 'lowerCase';
+
 export default class Keyboard {
 
   constructor() {
     this.keyboard = [];
-    this.language = "russian";
-    this.letterCase = "upperCase";
-    this.keyboardContainer = document.querySelector(".keyboard"); 
+    this.language = ENGLISH;
+    this.letterCase = UPPER_CASE;
+    this.keyboardContainer = document.querySelector('.keyboard'); 
+    this.isLeftCtrlActive = false;
+    this.isLeftAltActive = false;
+    this.shiftState = false;
   }
 
-  addKey(key){
-    this.keyboard.push(key);
+  addKeyButton(keyButton){
+    this.keyboard.push(keyButton);
   }
 
   append(key){
@@ -16,10 +24,28 @@ export default class Keyboard {
   }
 
   changeLanguage(){
-    if(this.language === "english"){
-      this.language = "russian";
+    if(this.language === ENGLISH){
+      this.language = RUSSIAN;
     } else {
-      this.language = "english";
+      this.language = ENGLISH;
     }
+  }
+
+  changeLetterCase(){
+    if(this.letterCase === UPPER_CASE){
+      this.letterCase = LOWER_CASE;
+    } else {
+      this.letterCase = UPPER_CASE;
+    }
+  }
+
+  changeButtons(){
+    this.keyboard.forEach(keyButton => {
+      keyButton.setKeyName(this.language, this.letterCase);
+    });  
+  }
+
+  selectKeyButton(event){
+    return document.querySelector(`.${event.code.charAt(0).toLowerCase() + event.code.slice(1)}`);
   }
 }
