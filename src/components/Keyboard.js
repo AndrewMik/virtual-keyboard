@@ -2,6 +2,8 @@ export default class Keyboard {
 
   constructor() {
     this.keyboard = [];
+    this.language = "russian";
+    this.letterCase = "upperCase";
     this.keyboardContainer = document.querySelector(".keyboard"); 
   }
 

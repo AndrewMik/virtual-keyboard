@@ -7,9 +7,20 @@ import './components/layout';
 
 const KEYBOARD = new Keyboard;
 
-for(let key in keys){
-  const keyButton = new Key(key);
-  const keyElement = keyButton.createKey();
+for(let i = 0; i < keys.length; i++){
+  const keyButton = new Key(keys[i], KEYBOARD.language, KEYBOARD.letterCase);
+
   KEYBOARD.addKey(keyButton);
-  KEYBOARD.append(keyElement);
+  KEYBOARD.append(keyButton.keyElement);
 }
+
+document.addEventListener('keydown', (event) => {
+  event.preventDefault();
+  const keyButton = document.querySelector(`.${event.code.charAt(0).toLowerCase() + event.code.slice(1)}`);
+  keyButton.classList.add("active");
+});
+
+document.addEventListener('keyup', (event) => {
+  const keyButton = document.querySelector(`.${event.code.charAt(0).toLowerCase() + event.code.slice(1)}`);
+  keyButton.classList.remove("active");
+});
