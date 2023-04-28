@@ -14,4 +14,12 @@ export default class Keyboard {
   append(key){
     this.keyboardContainer.append(key);
   }
+
+  changeLanguage(){
+    if(this.language === "english"){
+      this.language = "russian";
+    } else {
+      this.language = "english";
+    }
+  }
 }
