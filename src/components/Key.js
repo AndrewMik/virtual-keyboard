@@ -10,6 +10,7 @@ export default class Key {
   createKey(){  
     this.keyElement.classList.add('key');
     this.keyElement.classList.add('glow');
+    this.keyElement.classList.add(this.key.type);
     this.keyElement.classList.add(this.key.code.charAt(0).toLowerCase() + this.key.code.slice(1));
   }
   

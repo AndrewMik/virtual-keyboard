@@ -13,6 +13,8 @@ export default class Keyboard {
     this.isLeftCtrlActive = false;
     this.isLeftAltActive = false;
     this.shiftState = false;
+    this.keyboardOutput = document.querySelector('.keyboard-output'); 
+    this.output = "";
   }
 
   addKeyButton(keyButton){

@@ -1,6 +1,7 @@
 [
   {
     "code":"Backquote",
+    "type": "char",
     "english": {
       "lowerCase": "`",
       "upperCase": "`",
@@ -14,6 +15,7 @@
   },
   {
     "code":"Digit1",
+    "type": "digit",
     "english": {
       "lowerCase": "1",
       "upperCase": "1",
@@ -27,6 +29,7 @@
   },
   {
     "code":"Digit2",
+    "type": "digit",
     "english": {
       "lowerCase": "2",
       "upperCase": "2",
@@ -40,6 +43,7 @@
   },
   {
     "code":"Digit3",
+    "type": "digit",
     "english": {
       "lowerCase": "3",
       "upperCase": "3",
@@ -53,6 +57,7 @@
   },
   {
     "code":"Digit4",
+    "type": "digit",
     "english": {
       "lowerCase": "4",
       "upperCase": "4",
@@ -66,6 +71,7 @@
   },
   {
     "code":"Digit5",
+    "type": "digit",
     "english": {
       "lowerCase": "5",
       "upperCase": "5",
@@ -79,6 +85,7 @@
   },
   {
     "code":"Digit6",
+    "type": "digit",
     "english": {
       "lowerCase": "6",
       "upperCase": "6",
@@ -92,6 +99,7 @@
   },
   {
     "code":"Digit7",
+    "type": "digit",
     "english": {
       "lowerCase": "7",
       "upperCase": "7",
@@ -105,6 +113,7 @@
   },
   {
     "code":"Digit8",
+    "type": "digit",
     "english": {
       "lowerCase": "8",
       "upperCase": "8",
@@ -118,6 +127,7 @@
   },
   {
     "code":"Digit9",
+    "type": "digit",
     "english": {
       "lowerCase": "9",
       "upperCase": "9",
@@ -131,6 +141,7 @@
   },
   {
     "code":"Digit0",
+    "type": "digit",
     "english": {
       "lowerCase": "0",
       "upperCase": "0",
@@ -144,6 +155,7 @@
   },
   {
     "code":"Minus",
+    "type": "char",
     "english": {
       "lowerCase": "-",
       "upperCase": "-",
@@ -157,6 +169,7 @@
   },
   {
     "code":"Equal",
+    "type": "char",
     "english": {
       "lowerCase": "=",
       "upperCase": "=",
@@ -170,6 +183,7 @@
   },
   {
     "code":"Backspace",
+    "type": "modifier",
     "english": {
       "lowerCase": "←",
       "upperCase": "←",
@@ -183,6 +197,7 @@
   },
   {
     "code":"Tab",
+    "type": "modifier",
     "english": {
       "lowerCase": "tab",
       "upperCase": "tab",
@@ -196,6 +211,7 @@
   },
   {
     "code":"KeyQ",
+    "type": "char",
     "english": {
       "lowerCase": "q",
       "upperCase": "Q",
@@ -209,6 +225,7 @@
   },
   {
     "code":"KeyW",
+    "type": "char",
     "english": {
       "lowerCase": "w",
       "upperCase": "W",
@@ -222,6 +239,7 @@
   },
   {
     "code":"KeyE",
+    "type": "char",
     "english": {
       "lowerCase": "e",
       "upperCase": "E",
@@ -235,6 +253,7 @@
   },
   {
     "code":"KeyR",
+    "type": "char",
     "english": {
       "lowerCase": "r",
       "upperCase": "R",
@@ -248,6 +267,7 @@
   },
   {
     "code":"KeyT",
+    "type": "char",
     "english": {
       "lowerCase": "t",
       "upperCase": "T",
@@ -261,6 +281,7 @@
   },
   {
     "code":"KeyY",
+    "type": "char",
     "english": {
       "lowerCase": "y",
       "upperCase": "Y",
@@ -274,6 +295,7 @@
   },
   {
     "code":"KeyU",
+    "type": "char",
     "english": {
       "lowerCase": "u",
       "upperCase": "U",
@@ -287,6 +309,7 @@
   },
   {
     "code":"KeyI",
+    "type": "char",
     "english": {
       "lowerCase": "i",
       "upperCase": "I",
@@ -300,6 +323,7 @@
   },
   {
     "code":"KeyO",
+    "type": "char",
     "english": {
       "lowerCase": "o",
       "upperCase": "O",
@@ -313,6 +337,7 @@
   },
   {
     "code":"KeyP",
+    "type": "char",
     "english": {
       "lowerCase": "p",
       "upperCase": "P",
@@ -326,6 +351,7 @@
   },
   {
     "code":"BracketLeft",
+    "type": "char",
     "english": {
       "lowerCase": "[",
       "upperCase": "[",
@@ -339,6 +365,7 @@
   },
   {
     "code":"BracketRight",
+    "type": "char",
     "english": {
       "lowerCase": "]",
       "upperCase": "]",
@@ -352,6 +379,7 @@
   },
   {
     "code":"Backslash",
+    "type": "char",
     "english": {
       "lowerCase": "\\",
       "upperCase": "\\",
@@ -365,6 +393,7 @@
   },
   {
     "code":"Delete",
+    "type": "modifier",
     "english": {
       "lowerCase": "del",
       "upperCase": "del",
@@ -378,6 +407,7 @@
   },
   {
     "code":"CapsLock",
+    "type": "modifier",
     "english": {
       "lowerCase": "caps",
       "upperCase": "caps",
@@ -391,6 +421,7 @@
   },
   {
     "code":"KeyA",
+    "type": "char",
     "english": {
       "lowerCase": "a",
       "upperCase": "A",
@@ -404,6 +435,7 @@
   },
   {
     "code":"KeyS",
+    "type": "char",
     "english": {
       "lowerCase": "s",
       "upperCase": "S",
@@ -417,6 +449,7 @@
   },
   {
     "code":"KeyD",
+    "type": "char",
     "english": {
       "lowerCase": "d",
       "upperCase": "D",
@@ -430,6 +463,7 @@
   },
   {
     "code":"KeyF",
+    "type": "char",
     "english": {
       "lowerCase": "f",
       "upperCase": "F",
@@ -443,6 +477,7 @@
   },
   {
     "code":"KeyG",
+    "type": "char",
     "english": {
       "lowerCase": "g",
       "upperCase": "G",
@@ -456,6 +491,7 @@
   },
   {
     "code":"KeyH",
+    "type": "char",
     "english": {
       "lowerCase": "h",
       "upperCase": "H",
@@ -469,6 +505,7 @@
   },
   {
     "code":"KeyJ",
+    "type": "char",
     "english": {
       "lowerCase": "j",
       "upperCase": "J",
@@ -482,6 +519,7 @@
   },
   {
     "code":"KeyK",
+    "type": "char",
     "english": {
       "lowerCase": "k",
       "upperCase": "K",
@@ -495,6 +533,7 @@
   },
   {
     "code":"KeyL",
+    "type": "char",
     "english": {
       "lowerCase": "l",
       "upperCase": "L",
@@ -508,6 +547,7 @@
   },
   {
     "code":"Semicolon",
+    "type": "char",
     "english": {
       "lowerCase": ";",
       "upperCase": ";",
@@ -521,6 +561,7 @@
   },
   {
     "code":"Quote",
+    "type": "char",
     "english": {
       "lowerCase": "'",
       "upperCase": "'",
@@ -534,6 +575,7 @@
   },
   {
     "code":"Enter",
+    "type": "modifier",
     "english": {
       "lowerCase": "enter",
       "upperCase": "enter",
@@ -547,6 +589,7 @@
   },
   {
     "code":"ShiftLeft",
+    "type": "modifier",
     "english": {
       "lowerCase": "shift",
       "upperCase": "shift",
@@ -560,6 +603,7 @@
   },
   {
     "code":"KeyZ",
+    "type": "char",
     "english": {
       "lowerCase": "z",
       "upperCase": "Z",
@@ -573,6 +617,7 @@
   },
   {
     "code":"KeyX",
+    "type": "char",
     "english": {
       "lowerCase": "x",
       "upperCase": "X",
@@ -586,6 +631,7 @@
   },
   {
     "code":"KeyC",
+    "type": "char",
     "english": {
       "lowerCase": "c",
       "upperCase": "C",
@@ -599,6 +645,7 @@
   },
   {
     "code":"KeyV",
+    "type": "char",
     "english": {
       "lowerCase": "v",
       "upperCase": "V",
@@ -612,6 +659,7 @@
   },
   {
     "code":"KeyB",
+    "type": "char",
     "english": {
       "lowerCase": "b",
       "upperCase": "B",
@@ -625,6 +673,7 @@
   },
   {
     "code":"KeyN",
+    "type": "char",
     "english": {
       "lowerCase": "n",
       "upperCase": "N",
@@ -638,6 +687,7 @@
   },
   {
     "code":"KeyM",
+    "type": "char",
     "english": {
       "lowerCase": "m",
       "upperCase": "M",
@@ -651,6 +701,7 @@
   },
   {
     "code":"Comma",
+    "type": "char",
     "english": {
       "lowerCase": ",",
       "upperCase": ",",
@@ -664,6 +715,7 @@
   },
   {
     "code":"Period",
+    "type": "char",
     "english": {
       "lowerCase": ".",
       "upperCase": ".",
@@ -677,6 +729,7 @@
   },
   {
     "code":"Slash",
+    "type": "char",
     "english": {
       "lowerCase": "/",
       "upperCase": "/",
@@ -690,6 +743,7 @@
   },
   {
     "code":"ArrowUp",
+    "type": "modifier",
     "english": {
       "lowerCase": "↑",
       "upperCase": "↑",
@@ -703,6 +757,7 @@
   },
   {
     "code":"ShiftRight",
+    "type": "modifier",
     "english": {
       "lowerCase": "shift",
       "upperCase": "shift",
@@ -716,6 +771,7 @@
   },
   {
     "code":"ControlLeft",
+    "type": "modifier",
     "english": {
       "lowerCase": "ctrl",
       "upperCase": "ctrl",
@@ -729,6 +785,7 @@
   },
   {
     "code":"MetaLeft",
+    "type": "modifier",
     "english": {
       "lowerCase": "win",
       "upperCase": "win",
@@ -742,6 +799,7 @@
   },
   {
     "code":"AltLeft",
+    "type": "modifier",
     "english": {
       "lowerCase": "alt",
       "upperCase": "alt",
@@ -755,6 +813,7 @@
   },
   {
     "code":"Space",
+    "type": "modifier",
     "english": {
       "lowerCase": "space",
       "upperCase": "space",
@@ -768,6 +827,7 @@
   },
   {
     "code":"AltRight",
+    "type": "modifier",
     "english": {
       "lowerCase": "alt",
       "upperCase": "alt",
@@ -781,6 +841,7 @@
   },
   {
     "code":"ArrowLeft",
+    "type": "modifier",
     "english": {
       "lowerCase": "←",
       "upperCase": "←",
@@ -794,6 +855,7 @@
   },
   {
     "code":"ArrowDown",
+    "type": "modifier",
     "english": {
       "lowerCase": "↓",
       "upperCase": "↓",
@@ -807,6 +869,7 @@
   },
   {
     "code":"ArrowRight",
+    "type": "modifier",
     "english": {
       "lowerCase": "→",
       "upperCase": "→",
@@ -820,6 +883,7 @@
   },
   {
     "code":"ControlRight",
+    "type": "modifier",
     "english": {
       "lowerCase": "ctrl",
       "upperCase": "ctrl",

@@ -40,6 +40,11 @@ document.addEventListener('keydown', (event) => {
     KEYBOARD.changeLanguage();
     KEYBOARD.changeButtons();
   }
+
+  if(keyButton.classList.contains("char") || keyButton.classList.contains("digit")){
+    KEYBOARD.output += keyButton.textContent;
+    KEYBOARD.keyboardOutput.value = KEYBOARD.output;
+  }
 });
 
 document.addEventListener('keyup', (event) => {
