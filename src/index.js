@@ -6,15 +6,9 @@ import './scss/main.scss';
 import './components/layout';
 
 const KEYBOARD = new Keyboard;
+const CLICK = 'click';
 
-for(let i = 0; i < keys.length; i++){
-  const keyButton = new Key(keys[i], KEYBOARD.language, KEYBOARD.letterCase);
-
-  KEYBOARD.addKeyButton(keyButton);
-  KEYBOARD.append(keyButton.keyElement);
-}
-
-document.addEventListener('keydown', (event) => {
+function pressButtonHandler(event){
   const keyButton = KEYBOARD.selectKeyButton(event);
 
   KEYBOARD.keyboard.forEach(keyButton => {
@@ -45,9 +39,15 @@ document.addEventListener('keydown', (event) => {
     KEYBOARD.output += keyButton.textContent;
     KEYBOARD.keyboardOutput.value = KEYBOARD.output;
   }
-});
 
-document.addEventListener('keyup', (event) => {
+  if(event.type === CLICK){
+    setTimeout(() => {
+      unpressButtonHandler(event)
+    }, 50);
+  }
+}
+
+function unpressButtonHandler(event){
   const keyButton = KEYBOARD.selectKeyButton(event);
 
   if(keyButton){
@@ -61,4 +61,17 @@ document.addEventListener('keyup', (event) => {
       KEYBOARD.isLeftAltActive = false;
     }
   }
-});
+}
+
+for(let i = 0; i < keys.length; i++){
+  const keyButton = new Key(keys[i], KEYBOARD.language, KEYBOARD.letterCase);
+
+  KEYBOARD.addKeyButton(keyButton);
+  KEYBOARD.append(keyButton.keyElement);
+}
+
+document.addEventListener('keydown', pressButtonHandler);
+
+KEYBOARD.keyboardContainer.addEventListener(CLICK, pressButtonHandler);
+
+document.addEventListener('keyup', unpressButtonHandler);

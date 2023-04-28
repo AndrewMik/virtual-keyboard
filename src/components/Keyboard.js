@@ -48,6 +48,10 @@ export default class Keyboard {
   }
 
   selectKeyButton(event){
-    return document.querySelector(`.${event.code.charAt(0).toLowerCase() + event.code.slice(1)}`);
+    if(event.type === "keydown" || event.type === "keyup" ){
+      return document.querySelector(`.${event.code.charAt(0).toLowerCase() + event.code.slice(1)}`);
+    } else {
+      return event.target;
+    }
   }
 }
