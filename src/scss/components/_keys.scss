@@ -1,0 +1,29 @@
+.key {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space {
+  width: 330px;
+}
+
+.backspace, .caps, .left-shift {
+  width: 100px;
+}
+
+.enter, .right-shift {
+  width: 86px;
+}
+
+.tab {
+  width: 50px;
+}
+
+.delete {
+  width: 44px;
+}
