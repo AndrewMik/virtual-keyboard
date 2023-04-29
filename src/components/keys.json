@@ -743,7 +743,7 @@
   },
   {
     "code":"ArrowUp",
-    "type": "modifier",
+    "type": "char",
     "english": {
       "lowerCase": "↑",
       "upperCase": "↑",
@@ -841,7 +841,7 @@
   },
   {
     "code":"ArrowLeft",
-    "type": "modifier",
+    "type": "char",
     "english": {
       "lowerCase": "←",
       "upperCase": "←",
@@ -855,7 +855,7 @@
   },
   {
     "code":"ArrowDown",
-    "type": "modifier",
+    "type": "char",
     "english": {
       "lowerCase": "↓",
       "upperCase": "↓",
@@ -869,7 +869,7 @@
   },
   {
     "code":"ArrowRight",
-    "type": "modifier",
+    "type": "char",
     "english": {
       "lowerCase": "→",
       "upperCase": "→",
