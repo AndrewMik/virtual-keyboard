@@ -1,6 +1,6 @@
 .keyboard {
-  width: 700px;
-  background-color: rgb(110, 110, 110);
+  width: $keyboard-width;
+  background-color: $keyboard-background-color;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;

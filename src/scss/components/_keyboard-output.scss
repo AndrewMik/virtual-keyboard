@@ -1,12 +1,12 @@
 .keyboard-output {
   display: block;
-  width: 700px;
+  width: $keyboard-width;
   height: 200px;
   margin: 10px auto 10px;
   padding: 10px;
-  font-size: 18px;
-  color: goldenrod;
+  font-size: $output-font-size;
+  color: $output-color;
   overflow: auto;
   tab-size: 4;
-  background-color: black;
+  background-color: $dark-background-color;
 }
