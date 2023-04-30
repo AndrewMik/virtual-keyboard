@@ -99,19 +99,13 @@ export default class Keyboard {
   }
 
   insertText(text) {
-    //find position of the first selected symbol
     const start = this.keyboardOutput.selectionStart;
-
-    //find position of the last selected symbol
     const end = this.keyboardOutput.selectionEnd;
 
-    // text before + new text + text after
     const finalText = this.keyboardOutput.value.substring(0, start) + text + this.keyboardOutput.value.substring(end);
 
-    // change value
     this.keyboardOutput.value = finalText;
-
-    // return cursot to it's place
+    
     this.keyboardOutput.selectionEnd = start + text.length;
   }
 
