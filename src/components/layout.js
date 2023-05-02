@@ -4,7 +4,7 @@ const OUTPUT = 'keyboard-output';
 const KEYBOARD = 'keyboard';
 const FOOTER_TEXT = 'footer-text';
 const TEXT = `Клавиатура создана в операционной системе Windows.
-             <br>Для переключения языка комбинация: левыe ctrl + alt.`
+             <br>Для переключения языка комбинация: левыe ctrl + alt.`;
 
 const HEADER = 'header';
 const MAIN = 'main';
@@ -13,9 +13,9 @@ const FOOTER = 'footer';
 const HEADING = 'h1';
 const TEXTAREA = 'textarea';
 const DIV = 'div';
-const PARAGRAPH  = 'p';
+const PARAGRAPH = 'p';
 
-function createElement(element){
+function createElement(element) {
   const elementToCreate = document.createElement(element);
 
   elementToCreate.classList.add(element);
