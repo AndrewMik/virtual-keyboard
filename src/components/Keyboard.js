@@ -24,17 +24,16 @@ const SPACE = 'space';
 const SHIFT_LEFT = 'shiftLeft';
 const SHIFT_RIGHT = 'shiftRight';
 
-const NEW_LINE = `\n`;
-const TAB_INDENT = `\t`;
+const NEW_LINE = '\n';
+const TAB_INDENT = '\t';
 const SPACE_INTERVAL = ' ';
 
 export default class Keyboard {
-
   constructor() {
     this.keyboard = [];
     this.language = ENGLISH;
     this.letterCase = LOWER_CASE;
-    this.keyboardContainer = document.querySelector(KEYBOARD); 
+    this.keyboardContainer = document.querySelector(KEYBOARD);
     this.isLeftCtrlActive = false;
     this.isLeftAltActive = false;
     this.shiftState = false;
@@ -48,7 +47,7 @@ export default class Keyboard {
   }
 
   changeLanguage() {
-    if(this.language === ENGLISH){
+    if (this.language === ENGLISH) {
       this.language = RUSSIAN;
     } else {
       this.language = ENGLISH;
@@ -56,7 +55,7 @@ export default class Keyboard {
   }
 
   changeLetterCase() {
-    if(this.letterCase === UPPER_CASE){
+    if (this.letterCase === UPPER_CASE) {
       this.letterCase = LOWER_CASE;
     } else {
       this.letterCase = UPPER_CASE;
@@ -64,35 +63,34 @@ export default class Keyboard {
   }
 
   changeButtons() {
-    this.keyboard.forEach(keyButton => {
+    this.keyboard.forEach((keyButton) => {
       keyButton.setKeyName(this.language, this.letterCase);
-    });  
+    });
   }
 
   shiftButtons() {
-    this.keyboard.forEach(keyButton => {
-      this.shift = "shift";
+    this.keyboard.forEach((keyButton) => {
+      this.shift = 'shift';
       keyButton.setKeyName(this.language, this.letterCase, this.shift);
-    });  
+    });
   }
 
   selectKeyButton(event) {
-    if(event.type === KEY_DOWN || event.type === KEY_UP ){
+    this.state = true;
+    if (event.type === KEY_DOWN || event.type === KEY_UP) {
       return document.querySelector(`.${event.code.charAt(0).toLowerCase() + event.code.slice(1)}`);
-    } else {
-      return event.target;
     }
+    return event.target;
   }
 
   setLocalStorage() {
-    console
     localStorage.setItem(LANGUAGE, this.language);
   }
 
   getLocalStorage() {
-    if(localStorage.getItem(LANGUAGE)) {
+    if (localStorage.getItem(LANGUAGE)) {
       this.language = localStorage.getItem(LANGUAGE);
-      if(this.language === UNDEFINED){
+      if (this.language === UNDEFINED) {
         this.language = ENGLISH;
       }
     }
@@ -105,7 +103,7 @@ export default class Keyboard {
     const finalText = this.keyboardOutput.value.substring(0, start) + text + this.keyboardOutput.value.substring(end);
 
     this.keyboardOutput.value = finalText;
-    
+
     this.keyboardOutput.selectionEnd = start + text.length;
   }
 
@@ -115,12 +113,12 @@ export default class Keyboard {
 
     let finalText;
 
-    if(start === end){
+    if (start === end) {
       finalText = this.keyboardOutput.value.substring(0, start) + this.keyboardOutput.value.substring(end + 1);
     } else {
       finalText = this.keyboardOutput.value.substring(0, start) + this.keyboardOutput.value.substring(end);
     }
- 
+
     this.keyboardOutput.value = finalText;
 
     this.keyboardOutput.selectionEnd = start;
@@ -132,12 +130,12 @@ export default class Keyboard {
 
     let finalText;
 
-    if(start === end){
+    if (start === end) {
       finalText = this.keyboardOutput.value.substring(0, start - 1) + this.keyboardOutput.value.substring(end);
     } else {
       finalText = this.keyboardOutput.value.substring(0, start) + this.keyboardOutput.value.substring(end);
     }
- 
+
     this.keyboardOutput.value = finalText;
 
     this.keyboardOutput.selectionEnd = (start === end) ? start - 1 : start;
@@ -147,8 +145,10 @@ export default class Keyboard {
     const start = this.keyboardOutput.selectionStart;
     const end = this.keyboardOutput.selectionEnd;
 
-    let finalText = this.keyboardOutput.value.substring(0, start) + NEW_LINE + this.keyboardOutput.value.substring(end);
- 
+    const finalText = this.keyboardOutput.value.substring(0, start)
+                     + NEW_LINE
+                     + this.keyboardOutput.value.substring(end);
+
     this.keyboardOutput.value = finalText;
 
     this.keyboardOutput.setSelectionRange(start + 1, start + 1);
@@ -158,8 +158,8 @@ export default class Keyboard {
     const start = this.keyboardOutput.selectionStart;
     const end = this.keyboardOutput.selectionEnd;
 
-    let finalText = this.keyboardOutput.value.substring(0, start)
-                    + TAB_INDENT 
+    const finalText = this.keyboardOutput.value.substring(0, start)
+                    + TAB_INDENT
                     + this.keyboardOutput.value.substring(end);
 
     this.keyboardOutput.value = finalText;
@@ -173,16 +173,16 @@ export default class Keyboard {
 
   pressButtonHandler(event) {
     const keyButton = this.selectKeyButton(event);
-  
-    this.keyboard.forEach(keyButton => {
-      if(keyButton.key.code === event.code){
+
+    this.keyboard.forEach((button) => {
+      if (button.key.code === event.code) {
         event.preventDefault();
       }
     });
-  
-    if(keyButton) {
+
+    if (keyButton) {
       keyButton.classList.toggle(ACTIVE);
-  
+
       switch (true) {
         case keyButton.classList.contains(CTRL_LEFT):
           this.isLeftCtrlActive = true;
@@ -217,9 +217,10 @@ export default class Keyboard {
         case keyButton.classList.contains(SHIFT_RIGHT):
           this.shiftButtons();
           break;
+        default:
       }
-      
-      if(this.isLeftCtrlActive && this.isLeftAltActive) {
+
+      if (this.isLeftCtrlActive && this.isLeftAltActive) {
         this.changeLanguage();
         this.changeButtons();
       }
@@ -228,9 +229,9 @@ export default class Keyboard {
 
   unpressButtonHandler(event) {
     const keyButton = this.selectKeyButton(event);
-  
-    if(keyButton) {
-      if(!keyButton.classList.contains(CAPSLOCK)) {
+
+    if (keyButton) {
+      if (!keyButton.classList.contains(CAPSLOCK)) {
         keyButton.classList.remove(ACTIVE);
       }
 
@@ -246,6 +247,7 @@ export default class Keyboard {
           this.shift = false;
           this.changeButtons();
           break;
+        default:
       }
     }
 
