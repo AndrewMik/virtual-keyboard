@@ -16,7 +16,7 @@ const MOUSE_UP = 'mouseup';
 const KEY_DOWN = 'keydown';
 const KEY_UP = 'keyup';
 
-for (let i = 0; i < keys.length; i++) {
+for (let i = 0; i < keys.length; i + 1) {
   const keyButton = new Key(keys[i]);
 
   KEYBOARD.addKeyButton(keyButton);
