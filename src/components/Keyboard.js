@@ -100,7 +100,8 @@ export default class Keyboard {
     const start = this.keyboardOutput.selectionStart;
     const end = this.keyboardOutput.selectionEnd;
 
-    const finalText = this.keyboardOutput.value.substring(0, start) + text + this.keyboardOutput.value.substring(end);
+    const finalText = this.keyboardOutput.value.substring(0, start)
+                      + text + this.keyboardOutput.value.substring(end);
 
     this.keyboardOutput.value = finalText;
 
@@ -114,9 +115,11 @@ export default class Keyboard {
     let finalText;
 
     if (start === end) {
-      finalText = this.keyboardOutput.value.substring(0, start) + this.keyboardOutput.value.substring(end + 1);
+      finalText = this.keyboardOutput.value.substring(0, start)
+                + this.keyboardOutput.value.substring(end + 1);
     } else {
-      finalText = this.keyboardOutput.value.substring(0, start) + this.keyboardOutput.value.substring(end);
+      finalText = this.keyboardOutput.value.substring(0, start)
+                + this.keyboardOutput.value.substring(end);
     }
 
     this.keyboardOutput.value = finalText;
@@ -131,9 +134,11 @@ export default class Keyboard {
     let finalText;
 
     if (start === end) {
-      finalText = this.keyboardOutput.value.substring(0, start - 1) + this.keyboardOutput.value.substring(end);
+      finalText = this.keyboardOutput.value.substring(0, start - 1)
+                + this.keyboardOutput.value.substring(end);
     } else {
-      finalText = this.keyboardOutput.value.substring(0, start) + this.keyboardOutput.value.substring(end);
+      finalText = this.keyboardOutput.value.substring(0, start)
+                + this.keyboardOutput.value.substring(end);
     }
 
     this.keyboardOutput.value = finalText;
