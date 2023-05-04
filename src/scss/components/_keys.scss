@@ -1,0 +1,36 @@
+.key {
+  width: $key-size;
+  height: $key-size;
+  background-color: $dark-background-color;
+  color: $key-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.space {
+  width: $key-space;
+}
+
+.backspace, .capsLock, .shiftLeft {
+  width: $large-key;
+}
+
+.enter, .shiftRight {
+  width: $big-key;
+}
+
+.tab {
+  width: $key-tab;
+}
+
+.delete {
+  width: $key-delete;
+}
+
+.active:after {
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+  border-radius: 50px;
+  transition: border-radius 0.3s, background-color 0.3s;
+}
